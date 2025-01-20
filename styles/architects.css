@@ -11,21 +11,25 @@
 }
 
 /* Shared Styles */
-.display-flex{
+.display-flex {
   display: flex;
 }
-.text-gray{
-  color: #424242; /* Dark 02 */
-}
-.text-light-gray{
-  color: #727272; /* Dark 03 */
+
+.text-gray {
+  color: #424242;
+  /* Dark 02 */
 }
 
-.bg-light{
+.text-light-gray {
+  color: #727272;
+  /* Dark 03 */
+}
+
+.bg-light {
   background-color: rgba(255, 144, 14, 0.1);
 }
 
-.btn-primary{
+.btn-primary {
   font-size: 1.25rem;
   font-weight: 600;
   background-color: #FF900E;
@@ -34,53 +38,150 @@
   border-radius: 8px;
   border: none;
 }
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main > section{
+  margin-top: 130px;
+}
+
+.section-title{
+  font-size: 2.81rem;
+  font-weight: 700;
+}
+
 /* Header Styles */
 
 /* navbar Related Styles */
-.navbar{
+.navbar {
   justify-content: space-between;
   align-items: center;
 }
-.brand{
+
+.brand {
   font-weight: 700;
   font-size: 3rem;
 }
-.nav-item{
+
+.nav-item {
   list-style: none;
   margin-right: 30px;
   text-decoration: none;
 }
-.nav-link{
+
+.nav-link {
   text-decoration: none;
   font-weight: 500;
 }
-.navbar, .banner{
+
+.navbar,
+.banner {
   max-width: 1440px;
   margin: 0 auto;
 }
 
 /* Banner Related Styles */
 
-.banner-content{
+.banner-content {
   max-width: 862px;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 50px;
 }
 
-.banner-title{
+.banner-title {
   font-size: 4rem;
   font-weight: bold;
 }
 
-.banner-image{
+.banner-image {
   width: 100%;
+}
+
+/* Team & Features Related Styles */
+
+.teams {
+  align-items: center;
+}
+
+.team-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 85px;
+}
+
+.our-features{
+  margin-left: 73px;
+  max-width: 537px;
+}
+
+#quick-list{
+  font-weight: 500;
+}
+#features{
+  color: #FF900E;
+}
+
+/* Some Facts related styles */
+.facts-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+}
+.fact-card{
+  border: 1px solid #FF900E;
+  border-radius: 8px;
+  height: 241.83PX;
+  width: 241.83px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.fact-number{
+  font-size: 2.81rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.fact-name{
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #727272;
+}
+
+.fact-description{
+  max-width: 542px;
 }
 
 /* Responsive Media Query */
 
 @media screen and (max-width: 576px) {
-  .navbar, .nav-links {
+
+  .navbar,
+  .nav-links,
+  .teams {
+    flex-direction: column;
+  }
+  .team-img-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .our-features{
+    margin-left: 20px;
+  }
+}
+
+/* Medium size device */
+
+@media screen and (min-width: 576px) and (max-width: 992px){
+  .teams{
     flex-direction: column;
   }
 }
